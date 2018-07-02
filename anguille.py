@@ -304,7 +304,6 @@ async def rt(ctx, roll: str):
 @bot.event
 async def on_member_join(channel, member):
     await bot.send_message(channel, "Bonjour et bienvenue " + member.name)
-
     role = discord.utils.get(member.server.roles, name="Non validé")
     await bot.add_roles(member, role)
 
