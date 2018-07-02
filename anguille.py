@@ -298,5 +298,22 @@ async def rt(ctx, roll: str):
     except Exception as e:
         print(e)
         return
+    
+ 
+# départs/arrivée membres
+
+
+@bot.event
+async def on_member_join(member):
+    channel = member.server.get_channel("welcome_channel")
+    await bot.send_message(channel, "Bonjour et bienvenue à Elydra! " + member.mention)
+    role = discord.utils.get(member.server.roles, name="Non validé")
+    await bot.add_roles(member, role)
+
+
+@bot.event
+async def on_member_remove(member):
+    channel = member.server.get_channel("welcome_channel")
+    await bot.send_message(channel, "**" + member.name + "** nous a quittés... espérons son retour prochain ;-;")
 
 bot.run(os.getenv('TOKEN'))
