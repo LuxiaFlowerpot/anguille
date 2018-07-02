@@ -303,10 +303,19 @@ async def rt(ctx, roll: str):
 # départs/arrivée membres
 
 
+# départs/arrivée membres
+
+
 @bot.event
 async def on_member_join(member):
     channel = member.server.get_channel("welcome_channel")
-    await bot.send_message(channel, "Bonjour et bienvenue à Elydra! " + member.mention)
+    await bot.send_message(channel, "Bonjour et bienvenue à Elydra, " + member.mention + " ! Nous espérons que le "
+                                                                                         "serveur te plaira, et que "
+                                                                                         "tu ne tarderas pas à nous "
+                                                                                         "rejoindre en rp après avoir "
+                                                                                         "lu le #règlement , le lore et"
+                                                                                         "posté ton personnage dans les"
+                                                                                         " #présentations \o/")
     role = discord.utils.get(member.server.roles, name="Non validé")
     await bot.add_roles(member, role)
 
