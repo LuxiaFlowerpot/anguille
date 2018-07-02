@@ -298,13 +298,5 @@ async def rt(ctx, roll: str):
     except Exception as e:
         print(e)
         return
-    
-# message d'arrivée
-    
-@bot.event
-async def on_member_join(channel, member):
-    await bot.send_message(channel, "Bonjour et bienvenue " + member.name)
-    role = discord.utils.get(member.server.roles, name="Non validé")
-    await bot.add_roles(member, role)
 
 bot.run(os.getenv('TOKEN'))
