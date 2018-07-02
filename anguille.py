@@ -313,7 +313,7 @@ async def on_member_join(member):
                                                                                          "serveur te plaira, et que "
                                                                                          "tu ne tarderas pas à nous "
                                                                                          "rejoindre en rp après avoir "
-                                                                                         "lu le #règlement , le lore et"
+                                                                                         "lu le #règlement , le lore et "
                                                                                          "posté ton personnage dans les"
                                                                                          " #présentations \o/")
     role = discord.utils.get(member.server.roles, name="Non validé")
