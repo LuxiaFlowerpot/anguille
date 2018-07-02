@@ -42,6 +42,16 @@ async def non():
         "https://www.youtube.com/watch?v=InQC3MvDZM4",
     ]
     await bot.say("Tu l'auras voulu :) " + random.choice(videos_infernales))
+    
+    
+@bot.command(name="23",
+             description="Ne pose pas de questions.")
+async def caesar():
+    await bot.say("Ne pose pas de questions et lis ça :\n"
+                  "_Il se couvre alors la tête de sa toge et s'effondre au pied de la statue de Pompée. Il a reçu 23 "
+                  "coups de poinçons. Aussitôt, les conjurés s'enfuient suivis des sénateurs innocents qui ont "
+                  "assisté à l'assassinat sans intervenir. C'est vers la fin de la journée que trois esclaves viennent "
+                  "chercher le corps._")
 
 
 # Descriptions des admins
