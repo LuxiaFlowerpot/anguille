@@ -196,7 +196,7 @@ async def fiche():
                   "**Physique:** [Description physique du personnage]\n"
                   "**Histoire:** [l'histoire de votre personnage, peut être courte et peu précise mais nécessaire.]\n"
                   "**Nouveau ?** [précisez si votre personnage est un second compte ou non]\n\n"
-                  "[image représentative du personnage, si possible sous forme de lien, mais pas obligatoirement.]```"
+                  "[image représentative du personnage, si possible sous forme de lien, mais pas obligatoirement.]```")
 
              
 # lancers de dés
