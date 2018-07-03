@@ -179,7 +179,7 @@ async def rule9():
 @bot.command(name="fiche",
              description="donne le modèle de fiche de présentation")
 async def fiche():
-    await bot.say("**__Modèle de la fiche de présentation__**\n\n""
+    await bot.say("**__Modèle de la fiche de présentation__**\n\n"
                   "(Copiez/collez l'encadré puis remplissez les informations "
                   "manquantes, en supprimant ce qui se trouve entre crochets)\n\n"
                   "```**Prénom:** [Prénom du personnage]\n"
