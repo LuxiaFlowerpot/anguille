@@ -171,7 +171,34 @@ async def rule9():
     await bot.say("Enfin, **vous êtes autorisés à avoir autant de comptes que vous le souhaitez**, pour autant que "
                      "vous fassiez de votre mieux pour les garder actifs un minimum. Refondre ses personnages est aussi"
                      " possible sans conditions.")
+    
+    
+# commandes informations lore
 
+
+@bot.command(name="fiche",
+             description="donne le modèle de fiche de présentation")
+async def fiche():
+    await bot.say("**__Modèle de la fiche de présentation__**\n\n""
+                  "(Copiez/collez l'encadré puis remplissez les informations "
+                  "manquantes, en supprimant ce qui se trouve entre crochets)\n\n"
+                  "```**Prénom:** [Prénom du personnage]\n"
+                  "**Nom:** [Nom du personnage]\n"
+                  "**Surnom:** [Optionnel]\n"
+                  "**Sexe:** [Sexe du personnage]\n"
+                  "**Âge:** [Âge du personnage]\n"
+                  "**Espèce:** [Wizel/Widrien/Guméon (/!\Impossible pour un premier personnage/!\)]\n"
+                  "**Occupation:** [Métier du personnage]\n"
+                  "**Equipement:** [Equipement du personnage]\n"
+                  "**Pouvoir/Forme animale:** [Supprimer la mention inutile, puis décrire l'attribut correspondant du personnage]\n"
+                  "[Si Wizel et formation terminée] **Dieu vénéré:** [Dieu vénéré par le personnage]\n"
+                  "**Mental:** [Description mentale du personnage]\n"
+                  "**Physique:** [Description physique du personnage]\n"
+                  "**Histoire:** [l'histoire de votre personnage, peut être courte et peu précise mais nécessaire.]\n"
+                  "**Nouveau ?** [précisez si votre personnage est un second compte ou non]\n\n"
+                  "[image représentative du personnage, si possible sous forme de lien, mais pas obligatoirement.]```"
+
+             
 # lancers de dés
 
 
@@ -309,9 +336,6 @@ async def rt(ctx, roll: str):
         print(e)
         return
     
- 
-# départs/arrivée membres
-
 
 # départs/arrivée membres
 
