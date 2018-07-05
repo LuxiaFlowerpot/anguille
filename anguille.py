@@ -90,8 +90,7 @@ async def luxia():
 
 @bot.command(name="melody",
              description="Permet d'obtenir des informations sur notre chère cartographe Melody",
-             brief="Détails sur Melody",
-             aliases="cartographe")
+             brief="Détails sur Melody")
 async def melody():
     await bot.say("Ancienne joueuse de Malm, Melody a su s'illustrer lors du développement d'Elydra en créant une carte **magnifaïque**"
                   "qui aura su impressionner nos trois fondateurs, ou en tout cas Styx et Luxia, Silonix **plutôt content que "
