@@ -88,7 +88,7 @@ async def luxia():
     
 # /melody
 
-@bot.command(name="melody",
+@bot.command(name="Melody",
              description="Permet d'obtenir des informations sur notre chère cartographe Melody",
              brief="Détails sur Melody")
 async def melody():
