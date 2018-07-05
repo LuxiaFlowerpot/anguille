@@ -47,7 +47,7 @@ async def non():
 @bot.command(name="23",
              description="Ne pose pas de questions.")
 async def caesar():
-    await bot.say("Ne pose pas de questions et lis ça :\n"
+    await bot.say("**__Ne pose pas de questions et lis ça :__**\n"
                   "_Il se couvre alors la tête de sa toge et s'effondre au pied de la statue de Pompée. Il a reçu 23 "
                   "coups de poinçons. Aussitôt, les conjurés s'enfuient suivis des sénateurs innocents qui ont "
                   "assisté à l'assassinat sans intervenir. C'est vers la fin de la journée que trois esclaves viennent "
@@ -94,7 +94,7 @@ async def luxia():
                 brief="Cite la règle 1")
 async def rule1():
     await bot.say("**Tous propos insultants, rabaissants, diffamatoires, racistes, homophobes, discriminants à "
-                     "l’encontre de qui que ce soit sont formellement interdits.** Même à titre humoristiques.")
+                     "l’encontre de qui que ce soit sont formellement interdits.** Même à titre humoristique.")
 
 
 @bot.command(name="règle2",
@@ -198,6 +198,16 @@ async def fiche():
                   "**Histoire:** [l'histoire de votre personnage, peut être courte et peu précise mais nécessaire.]\n"
                   "**Nouveau ?** [précisez si votre personnage est un second compte ou non]\n\n"
                   "[image représentative du personnage, si possible sous forme de lien, mais pas obligatoirement.]```")
+    
+    
+@bot.command(name="guméon",
+             description="Permet d'obtenir des informations sur les Guméons",
+             brief="Détails sur les Guméons")
+async def gumeon():
+    await bot.say("__/!\Attention : Cette race n'est pas jouable en premier compte, et avant un mois d'ancienneté /!\__\n\n"
+                  "Issus d'une union interdite et rare entre un Wizel et un Widrien, ils sont la honte, comme leur nom le"
+                  " laisse entendre en clanique. Ils sont exclus, humiliés, et extrêmement limités dans leurs compétences, "
+                  "aussi bien magiques que physiques.\n\n Pour plus de renseignements, allez voir le salon les concernant.")
 
              
 # lancers de dés
@@ -348,9 +358,8 @@ async def on_member_join(member):
                                                                                          "serveur te plaira, et que "
                                                                                          "tu ne tarderas pas à nous "
                                                                                          "rejoindre en rp après avoir "
-                                                                                         "lu le #règlement , le lore et "
-                                                                                         "posté ton personnage dans les"
-                                                                                         " #présentations \o/")
+                                                                                         "lu le règlement , le lore et "
+                                                                                         "posté ton personnage \o/")
     role = discord.utils.get(member.server.roles, name="Non validé")
     await bot.add_roles(member, role)
 
