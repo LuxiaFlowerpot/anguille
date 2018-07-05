@@ -84,6 +84,20 @@ async def luxia():
                      " [trop dangereux], mais surveille le règlement, ce bot et les parties de Cards Against "
                      "Humanity. Elle sert aussi de psychologue à ses heures perdues, et adore les pots de fleurs "
                      "et les tomates. Personne n'est certain qu'elle soit réellement de sexe féminin.")
+    
+    
+# /melody
+
+@bot.command(name="melody",
+             description="Permet d'obtenir des informations sur notre chère cartographe Melody",
+             brief="Détails sur Melody",
+             aliases="cartographe")
+async def melody():
+    await bot.say("Ancienne joueuse de Malm, Melody a su s'illustrer lors du développement d'Elydra en créant une carte **magnifaïque**"
+                  "qui aura su impressionner nos trois fondateurs, ou en tout cas Styx et Luxia, Silonix **plutôt content que "
+                  "quelqu'un ait fait son travail à sa place, NESSPA €_€**. En gage de reconnaissance, elle hérita donc d'un rôle "
+                  "de cartographe, d'un accès anticipé au serveur [elle a servi de test quoi, comme moi pauvre anguille ;-;], "
+                  "et de cette __magnifique commande personnalisée__.")
 
 
 # commandes citation règlement
