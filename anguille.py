@@ -1,6 +1,6 @@
-import os
 import random
 import re
+import os
 
 import discord
 from discord.ext import commands
@@ -27,11 +27,21 @@ async def on_ready():
                 pass_context=True)
 async def hello(context):
     possible_responses = [
-        "おはよう",
-        "Hello",
+        "おはよう ",
+        "Hello ",
         "Non. ",
     ]
     await bot.say(random.choice(possible_responses) + context.message.author.mention)
+
+
+@bot.command(name="23",
+             description="Ne pose pas de questions.")
+async def caesar():
+    await bot.say("**Ne pose pas de questions et lis ça :**\n"
+                  "_Il se couvre alors la tête de sa toge et s'effondre au pied de la statue de Pompée. Il a reçu 23 "
+                  "coups de poinçons. Aussitôt, les conjurés s'enfuient suivis des sénateurs innocents qui ont "
+                  "assisté à l'assassinat sans intervenir. C'est vers la fin de la journée que trois esclaves viennent "
+                  "chercher le corps._")
 
 
 @bot.command(description="Je te le dis, tu vas le regretter, ne fais pas ça.",
@@ -42,16 +52,6 @@ async def non():
         "https://www.youtube.com/watch?v=InQC3MvDZM4",
     ]
     await bot.say("Tu l'auras voulu :) " + random.choice(videos_infernales))
-    
-    
-@bot.command(name="23",
-             description="Ne pose pas de questions.")
-async def caesar():
-    await bot.say("**__Ne pose pas de questions et lis ça :__**\n"
-                  "_Il se couvre alors la tête de sa toge et s'effondre au pied de la statue de Pompée. Il a reçu 23 "
-                  "coups de poinçons. Aussitôt, les conjurés s'enfuient suivis des sénateurs innocents qui ont "
-                  "assisté à l'assassinat sans intervenir. C'est vers la fin de la journée que trois esclaves viennent "
-                  "chercher le corps._")
 
 
 # Descriptions des admins
@@ -84,19 +84,20 @@ async def luxia():
                      " [trop dangereux], mais surveille le règlement, ce bot et les parties de Cards Against "
                      "Humanity. Elle sert aussi de psychologue à ses heures perdues, et adore les pots de fleurs "
                      "et les tomates. Personne n'est certain qu'elle soit réellement de sexe féminin.")
-    
-    
-# /melody
+
+
+# /Melody
 
 @bot.command(name="Melody",
              description="Permet d'obtenir des informations sur notre chère cartographe Melody",
              brief="Détails sur Melody")
 async def melody():
-    await bot.say("Ancienne joueuse de Malm, Melody a su s'illustrer lors du développement d'Elydra en créant une carte **magnifaïque**"
-                  "qui aura su impressionner nos trois fondateurs, ou en tout cas Styx et Luxia, Silonix **plutôt content que "
-                  "quelqu'un ait fait son travail à sa place, NESSPA €_€**. En gage de reconnaissance, elle hérita donc d'un rôle "
-                  "de cartographe, d'un accès anticipé au serveur [elle a servi de test quoi, comme moi pauvre anguille ;-;], "
-                  "et de cette __magnifique commande personnalisée__.")
+    await bot.say(
+        "Ancienne joueuse de Malm, Melody a su s'illustrer lors du développement d'Elydra en créant une carte **magnifaïque**"
+        "qui aura su impressionner nos trois fondateurs, ou en tout cas Styx et Luxia, Silonix **plutôt content que "
+        "quelqu'un ait fait son travail à sa place, NESSPA €_€**. En gage de reconnaissance, elle hérita donc d'un rôle "
+        "de cartographe, d'un accès anticipé au serveur [elle a servi de test quoi, comme moi pauvre anguille ;-;], "
+        "et de cette __magnifique commande personnalisée__.")
 
 
 # commandes citation règlement
@@ -184,14 +185,14 @@ async def rule9():
     await bot.say("Enfin, **vous êtes autorisés à avoir autant de comptes que vous le souhaitez**, pour autant que "
                      "vous fassiez de votre mieux pour les garder actifs un minimum. Refondre ses personnages est aussi"
                      " possible sans conditions.")
-    
-    
+
+
 # commandes informations lore
 
 
 @bot.command(name="fiche",
              description="donne le modèle de fiche de présentation",
-             brief="donne le modèle de fiche de présentation")
+             brief="donne le modèle de la fiche de présentation")
 async def fiche():
     await bot.say("**__Modèle de la fiche de présentation__**\n\n"
                   "(Copiez/collez l'encadré puis remplissez les informations "
@@ -204,25 +205,27 @@ async def fiche():
                   "**Espèce:** [Wizel/Widrien/Guméon (/!\Impossible pour un premier personnage/!\)]\n"
                   "**Occupation:** [Métier du personnage]\n"
                   "**Equipement:** [Equipement du personnage]\n"
-                  "**Pouvoir/Forme animale:** [Supprimer la mention inutile, puis décrire l'attribut correspondant du personnage]\n"
+                  "**Pouvoir/Forme animale:** [Supprimer la mention inutile, puis décrire l'attribut correspondant du "
+                  "personnage]\n"
                   "[Si Wizel et formation terminée] **Dieu vénéré:** [Dieu vénéré par le personnage]\n"
                   "**Mental:** [Description mentale du personnage]\n"
                   "**Physique:** [Description physique du personnage]\n"
                   "**Histoire:** [l'histoire de votre personnage, peut être courte et peu précise mais nécessaire.]\n"
                   "**Nouveau ?** [précisez si votre personnage est un second compte ou non]\n\n"
                   "[image représentative du personnage, si possible sous forme de lien, mais pas obligatoirement.]```")
-    
-    
+
+
 @bot.command(name="guméon",
              description="Permet d'obtenir des informations sur les Guméons",
              brief="Détails sur les Guméons")
 async def gumeon():
-    await bot.say("__/!\Attention : Cette race n'est pas jouable en premier compte, et avant un mois d'ancienneté /!\__\n\n"
-                  "Issus d'une union interdite et rare entre un Wizel et un Widrien, ils sont la honte, comme leur nom le"
-                  " laisse entendre en clanique. Ils sont exclus, humiliés, et extrêmement limités dans leurs compétences, "
-                  "aussi bien magiques que physiques.\n\n Pour plus de renseignements, allez voir le salon les concernant.")
+    await bot.say(
+        "__/!\Attention : Cette race n'est pas jouable en premier compte, et avant un mois d'ancienneté /!\__\n\n"
+        "Issus d'une union interdite et rare entre un Wizel et un Widrien, ils sont la honte, comme leur nom le"
+        " laisse entendre en clanique. Ils sont exclus, humiliés, et extrêmement limités dans leurs compétences, "
+        "aussi bien magiques que physiques.\n\n Pour plus de renseignements, allez voir le salon les concernant.")
 
-             
+
 # lancers de dés
 
 
@@ -359,27 +362,28 @@ async def rt(ctx, roll: str):
     except Exception as e:
         print(e)
         return
-    
+
 
 # départs/arrivée membres
 
 
 @bot.event
 async def on_member_join(member):
-    channel = member.server.get_channel("welcome_channel")
-    await bot.send_message(channel, "Bonjour et bienvenue à Elydra, " + member.mention + " ! Nous espérons que le "
-                                                                                         "serveur te plaira, et que "
-                                                                                         "tu ne tarderas pas à nous "
-                                                                                         "rejoindre en rp après avoir "
-                                                                                         "lu le règlement , le lore et "
-                                                                                         "posté ton personnage \o/")
+    channel = member.server.get_channel("460833496668176394")
+    await bot.send_message(channel, "Bonjour et bienvenue à Elydra, " + member.mention + ' ! Nous espérons que le '
+                                                                                         'serveur te plaira, et que '
+                                                                                         'tu ne tarderas pas à nous '
+                                                                                         'rejoindre en rp après avoir '
+                                                                                         'lu le #règlement , le lore et'
+                                                                                         ' posté ton personnage dans '
+                                                                                         'les #présentations \o/')
     role = discord.utils.get(member.server.roles, name="Non validé")
     await bot.add_roles(member, role)
 
 
 @bot.event
 async def on_member_remove(member):
-    channel = member.server.get_channel("welcome_channel")
+    channel = member.server.get_channel("460833496668176394")
     await bot.send_message(channel, "**" + member.name + "** nous a quittés... espérons son retour prochain ;-;")
 
 bot.run(os.getenv('TOKEN'))
