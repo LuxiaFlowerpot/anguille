@@ -219,11 +219,34 @@ async def fiche():
              description="Permet d'obtenir des informations sur les Guméons",
              brief="Détails sur les Guméons")
 async def gumeon():
-    await bot.say(
-        "__/!\Attention : Cette race n'est pas jouable en premier compte, et avant un mois d'ancienneté /!\__\n\n"
+    await bot.say("__/!\Attention : Cette race n'est pas jouable en premier compte, et avant un mois d'ancienneté /!\__\n\n"
         "Issus d'une union interdite et rare entre un Wizel et un Widrien, ils sont la honte, comme leur nom le"
         " laisse entendre en clanique. Ils sont exclus, humiliés, et extrêmement limités dans leurs compétences, "
         "aussi bien magiques que physiques.\n\n Pour plus de renseignements, allez voir le salon les concernant.")
+    
+    
+@bot.command(name="widrien",
+             description="Permet d'obtenir des informations sur les Widriens",
+             brief="Détails sur les Widriens")
+async def widrien():
+    await bot.say("Premiers habitants humanoïdes d'Elydra, les Widriens sont un entre-deux entre des humains et des "
+                  "animaux, capables d'osciller entre différentes formes. Ils vénèrent la nature, qu'ils placent "
+                  "sur un piédestal divin. Leur histoire est particulièrement chargée, et bien que la période clanique"
+                  " ait touché à sa fin, il persiste encore certaines tensions entre certaines grandes familles."
+                  " L'art sous toutes ses formes est au centre de leur culture, très important et respecté.\n\n"
+                  "Pour plus de renseignements, allez voir le salon les concernant.")
+    
+
+@bot.command(name="wizel",
+             description="Permet d'obtenir des renseignements sur les Wizels",
+             brief="Détails sur les Wizel")
+async def wizel():
+    await bot.say("""Leur arrivée dans le monde d'Elydra aura été la marque du début de la période "après humain". """
+                 " Les Wizels sont donc, comme vous l'avez compris, des humains. Seulement, ils n'en présentent pas "
+                 "tout à fait les mêmes caractéristiques; eux sont, en présence d'un minéral particulier nommé le "
+                 "Lapa, dotés de pouvoirs étranges et propres à chaque individu. Leur religion, le Rosem, repose sur un panthéon "
+                 "de onze dieux, mais chacun ne vénère qu'un de ceux là, choisi à la fon de sa formation et prié jusqu'au bout"
+                 " de sa vie.")
 
 
 # lancers de dés
