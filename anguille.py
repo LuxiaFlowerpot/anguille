@@ -17,7 +17,7 @@ async def on_ready():
     print(bot.user.name)
     print(bot.user.id)
     print('------')
-    await bot.change_presence(game=discord.Game(name='câliner des anguilles'))
+    await bot.change_presence(game=discord.Game(name='câliner des anguilles', type=3))
 
 # commandes basiques
 
