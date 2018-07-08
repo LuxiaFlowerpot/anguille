@@ -245,7 +245,7 @@ async def wizel():
                  " Les Wizels sont donc, comme vous l'avez compris, des humains. Seulement, ils n'en présentent pas "
                  "tout à fait les mêmes caractéristiques; eux sont, en présence d'un minéral particulier nommé le "
                  "Lapa, dotés de pouvoirs étranges et propres à chaque individu. Leur religion, le Rosem, repose sur un panthéon "
-                 "de onze dieux, mais chacun ne vénère qu'un de ceux là, choisi à la fon de sa formation et prié jusqu'au bout"
+                 "de onze dieux, mais chacun ne vénère qu'un de ceux là, choisi à la fin de sa formation et prié jusqu'au bout"
                  " de sa vie.\n\n Pour plus de renseignements, allez voir le salon les concernant.")
 
 
